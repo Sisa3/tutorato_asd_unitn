@@ -14,6 +14,32 @@ using namespace std;
   *   il simbolo "0" indica che non ha figlio sx/dx 
   */
 
+void init_input(){
+    ofstream alberi_input("13_input_alberi.txt");
+    alberi_input << "20 \n" <<
+                    "1 0 0\n" <<
+                    "2 1 3\n" <<
+                    "3 0 4\n" <<
+                    "4 0 0\n" <<
+                    "5 2 7\n" <<
+                    "6 0 0\n" <<
+                    "7 6 9\n" <<
+                    "8 0 0\n" <<
+                    "9 8 0\n" <<
+                    "10 5 15\n" <<
+                    "11 0 0 \n" <<
+                    "12 11 14\n" <<
+                    "13 0 0\n" <<
+                    "14 13 0\n" <<
+                    "15 12 18\n" <<
+                    "16 0 17\n" <<
+                    "17 0 0 \n" <<
+                    "18 16 19\n" <<
+                    "19 0 20\n" <<
+                    "20 0 0\n";
+    alberi_input.close();
+}
+
 struct my_tree {
     int value;
     my_tree* left;
@@ -98,7 +124,8 @@ void find_path_2(my_tree& radice, int dest, vector<int>& path){
 }
 
 int main () {
-
+    
+    init_input();
     ifstream in("13_input_alberi.txt");
     int N;
     in >> N;

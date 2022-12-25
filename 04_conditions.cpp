@@ -21,6 +21,11 @@ int main() {
     } else {
         cout << "a e' minore o uguale a b" << endl;
     }
+	
+	// Un altro modo per scrivere un if e'
+    cout << a << (a < b ? " < " : " >= ") << b << endl;     
+	// Questo stampera' 'a < b' oppure 'a >= b' (sostituendo a e b con gli opportuni valori assegnati)
+    
 
     /*
     *   SWITCH:
